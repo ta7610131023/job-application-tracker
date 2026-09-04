@@ -1,0 +1,43 @@
+{% extends "application/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h2>Job Tracker</h2>
+
+    <button class="btn btn-sm btn-outline-primary" id="applications-list">Applications</button>
+    <button class="btn btn-sm btn-outline-primary" id="application-add">Add Application</button>
+    <hr>
+
+    <div id="applications-view">
+    </div>
+
+    <div id="add-application-view">
+        <h3>Add Application</h3>
+        <form id="add-application-form">
+            <div class="form-group">
+                Company: <input id="company" class="form-control">
+            </div>
+            <div class="form-group">
+                Position: <input id="position" class="form-control">
+            </div>
+            <div class="form-group">
+                Job URL: <input id="job_url" class="form-control">
+            </div>
+            <div class="form-group">
+                Status: <input id="status" class="form-control">
+            </div>
+            <div class="form-group">
+                Date Applied: <input id="date_applied" class="form-control">
+            </div>
+            <div class="form-group">
+                Note: <textarea id="notes" class="form-control"></textarea>
+            </div>
+            <hr>
+            <input type="submit" class="btn btn-primary"/>
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'application/index.js' %}"></script>
+{% endblock %}
