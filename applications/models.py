@@ -18,7 +18,6 @@ class Application(models.Model):
             "position": self.position,
             "job_url": self.job_url,
             "status": self.status,
-            "date_applied": self.date_applied,
-            "archived": self.archived,
+            "date_applied": self.date_applied.strftime("%b %d %Y"),
             "notes": self.notes
         }

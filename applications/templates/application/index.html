@@ -5,7 +5,7 @@
     <h2>Job Tracker</h2>
 
     <button class="btn btn-sm btn-outline-primary" id="applications-list">Applications</button>
-    <button class="btn btn-sm btn-outline-primary" id="application-add">Add Application</button>
+    <button class="btn btn-sm btn-outline-primary" id="add-application">Add Application</button>
     <hr>
 
     <div id="applications-view">
@@ -15,27 +15,29 @@
         <h3>Add Application</h3>
         <form id="add-application-form">
             <div class="form-group">
-                Company: <input id="company" class="form-control">
+                Company: <input id="company" class="form-control" required>
             </div>
             <div class="form-group">
-                Position: <input id="position" class="form-control">
+                Position: <input id="position" class="form-control" required>
             </div>
             <div class="form-group">
-                Job URL: <input id="job_url" class="form-control">
+                Job URL: <input id="job-url" type="url" class="form-control">
             </div>
             <div class="form-group">
-                Status: <input id="status" class="form-control">
+                Status: <input id="status" class="form-control" required>
             </div>
             <div class="form-group">
-                Date Applied: <input id="date_applied" class="form-control">
+                Date Applied: <input id="date-applied" type="date" class="form-control" required>
             </div>
             <div class="form-group">
                 Note: <textarea id="notes" class="form-control"></textarea>
             </div>
-            <hr>
+            <br>
             <input type="submit" class="btn btn-primary"/>
         </form>
     </div>
+
+    <div id="application-detail-view"></div>
 {% endblock %}
 
 {% block script %}
